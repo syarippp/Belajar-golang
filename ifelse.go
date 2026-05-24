@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func tentukan_kedewasaan() {
 	age := 16
 
 	if age >= 18 {

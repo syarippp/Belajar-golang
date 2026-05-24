@@ -7,7 +7,7 @@ type Mhs struct {
 	Nilai int
 }
 
-func main() {
+func nilai_mhs() {
 	daftarMhs := []Mhs{
 		{"Ahmad", 90},
 		{"Syarif", 65},

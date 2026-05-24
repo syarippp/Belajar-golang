@@ -8,7 +8,7 @@ type Mahasiswa struct {
 	Semester int
 }
 
-func main() {
+func data_mhs() {
 	mhs1 := Mahasiswa{
 		Nama:     "Ahmad",
 		Umur:     22,

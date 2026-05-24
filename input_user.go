@@ -12,7 +12,7 @@ func puji(nama string) {
 	fmt.Println("Bagus sekali, pertahankan ya", nama)
 }
 
-func main() {
+func hasil_nilai() {
 
 	var nama string
 	var nilai int

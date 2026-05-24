@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func map_data() {
 	mahasiswa := map[string]string{
 		"nama": "ahmad",
 		"asal": "malang",

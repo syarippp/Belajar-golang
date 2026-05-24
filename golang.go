@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func data_pribadi() {
 	name := "Ahmad Syarif"
 	age := "22 y.o"
 

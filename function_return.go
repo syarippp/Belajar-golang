@@ -14,7 +14,7 @@ func tidak_lulus(nama string) {
 	fmt.Println("Anda tidak memenuhi minimal nilai", nama)
 }
 
-func main() {
+func hitung_kelulusan() {
 
 	var nama string
 	var nilai1 int

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func slice_data() {
 	nama := []string{"Ahmad", "Syarif", "Daniel"}
 
 	fmt.Println(strings.Join(nama, ","))

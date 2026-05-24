@@ -5,7 +5,7 @@ import "fmt"
 func sapa(nama string) {
 	fmt.Println("Halo", nama)
 }
-func main() {
+func panggil() {
 	sapa("Ahmad")
 	sapa("Syarif")
 }

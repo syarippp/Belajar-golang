@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func kelulusan_mhs() {
 	mahasiswa := map[string]int{
 		"Ahmad":  90,
 		"Syarif": 70,
