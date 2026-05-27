@@ -8,24 +8,16 @@ type nilaiMhs struct {
 	Status string
 }
 
-var daftarMahasiswa []nilaiMhs
-
-func hitungnilai(mhs nilaiMhs) string {
-
-	if mhs.Nilai >= 75 {
-		return "Lulus"
-	}
-	return "Tidak lulus"
-}
-
-func inputnilaiMhs() {
+func inputnilaiMhs() []nilaiMhs {
 
 	var jumlah int
+	var daftarMahasiswa []nilaiMhs
 
 	fmt.Print("Jumlah Mahasiswa:")
 	fmt.Scanln(&jumlah)
 
 	for i := 0; i < jumlah; i++ {
+
 		var mahasiswa nilaiMhs
 
 		fmt.Print("Tambah Nama Mahasiswa:")
@@ -36,25 +28,41 @@ func inputnilaiMhs() {
 
 		mahasiswa.Status = hitungnilai(mahasiswa)
 
-		tampilkandataMhs(mahasiswa)
-
-		fmt.Println()
+		daftarMahasiswa = append(daftarMahasiswa, mahasiswa)
 	}
+	return daftarMahasiswa
 }
 
-// func simpandataMhs(mahasiswa nilaiMhs) {
+func hitungnilai(mhs nilaiMhs) string {
 
-// }
+	if mhs.Nilai >= 75 {
+		return "Lulus"
+	}
+	return "Tidak lulus"
+}
 
-func tampilkandataMhs(mahasiswa nilaiMhs) {
-	daftarMahasiswa = append(daftarMahasiswa, mahasiswa)
+func rataRata_nilai(daftarMahasiswa []nilaiMhs) float64 {
+	var total int
 
 	for _, mhs := range daftarMahasiswa {
-		fmt.Println("==Data Nilai Mahasiswa==")
+		total += mhs.Nilai
+	}
+
+	rataRata := float64(total) / float64(len(daftarMahasiswa))
+
+	return rataRata
+}
+
+func tampilkandataMhs(daftarMahasiswa []nilaiMhs) {
+
+	fmt.Println("==Data Nilai Mahasiswa==")
+
+	for _, mhs := range daftarMahasiswa {
 		fmt.Println("Nama:", mhs.Nama)
 		fmt.Println("Nilai:", mhs.Nilai)
 		fmt.Println("Status:", mhs.Status)
-
 		fmt.Println()
 	}
+	rata := rataRata_nilai(daftarMahasiswa)
+	fmt.Println("Rata-Rata Semua Nilai:", rata)
 }
